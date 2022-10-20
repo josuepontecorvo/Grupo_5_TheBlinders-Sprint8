@@ -1,5 +1,16 @@
-function CategoriesInDb() {
-  
+
+function CategoriesInDb(props) {
+    let bicicletas = {
+        name: 'Bicicletas',
+        quantity: props.bicicletas
+    }
+
+    let accesorios = {
+        name: 'Accesorios',
+        quantity: props.accesorios
+    }
+
+    let categoriesInDb = [bicicletas, accesorios]
     return (
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
@@ -10,10 +21,10 @@ function CategoriesInDb() {
           </div>
           <div className="card-body">
             <div className="row">
-              {genres.map((genre, i) => (
+              {categoriesInDb.map((category, i) => (
                 <div className="col-lg-6 mb-4" key={i}>
                   <div className="card bg-dark text-white shadow">
-                    <div className="card-body">{genre}</div>
+                    <div className="card-body">{category.name}: {category.quantity}</div>
                   </div>
                 </div>
               ))}
