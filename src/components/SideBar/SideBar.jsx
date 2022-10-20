@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import image from "../../assets/images/logo-DH.png";
+import image from "../../assets/images/logo-BM.png";
 import { Logout } from "../Logout";
 
 function SideBar() {
@@ -10,14 +10,11 @@ function SideBar() {
       id="accordionSidebar"
     >
       {/*<!-- Sidebar - Brand -->*/}
-      <a
-        className="sidebar-brand d-flex align-items-center justify-content-center"
-        href="/"
-      >
+      <Link to="/">
         <div className="sidebar-brand-icon">
-          <img className="w-100" src={image} alt="Digital House" />
+          <img className="w-100" src={image} alt="BiciMundo" />
         </div>
-      </a>
+      </Link>
 
       {/*<!-- Divider -->*/}
       <hr className="sidebar-divider my-0" />

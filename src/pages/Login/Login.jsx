@@ -15,7 +15,6 @@ function Login() {
         let username = inputEmail.current.value
         let password = inputPassword.current.value
         let credentials = {username, password}
-        console.log(credentials)
         fetch("http://localhost:3000/api/usuarios/ingresar", {method: 'POST', headers: {'Content-Type': 'application/json'},body: JSON.stringify(credentials)})
             .then(res => res.json())
             .then(data => {
@@ -27,10 +26,6 @@ function Login() {
                     navigate("/dashboard")
                 }
             })
-
-
-        
-
     }
 
     return (
@@ -38,13 +33,13 @@ function Login() {
         <div className="col-8 mx-auto position-relative">
             <h2 className="text-center my-5">Login</h2>
             <div className="mb-3 row">
-                <label for="staticEmail" className="col-lg-2 col-form-label">Email</label>
+                <label htmlFor="staticEmail" className="col-lg-2 col-form-label">Email</label>
                 <div className="col-lg-10">
                     <input ref={inputEmail} type="text" className="form-control" id="inputEmail" placeholder="email@example.com" />
                 </div>
             </div>
             <div className="mb-3 row">
-                <label for="inputPassword" className="col-lg-2 col-form-label">Password</label>
+                <label htmlFor="inputPassword" className="col-lg-2 col-form-label">Password</label>
                 <div className="col-lg-10">
                     <input ref={inputPassword} type="password" className="form-control" id="inputPassword" />
                 </div>
