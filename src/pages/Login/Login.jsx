@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { createUser } from "../../redux/state/user";
+import { createUser } from "../../redux/states/user";
 
 function Login() {
     const dispatch = useDispatch();

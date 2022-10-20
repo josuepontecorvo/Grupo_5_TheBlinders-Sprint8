@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clearLocalStorageUser, resetUser } from "../../redux/state/user";
+import { clearLocalStorageUser, resetUser } from "../../redux/states/user";
 
 
 function Logout() {
