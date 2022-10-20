@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import image from "../../assets/images/logo-DH.png";
+import { Logout } from "../Logout";
 
 function SideBar() {
   return (
@@ -73,6 +74,10 @@ function SideBar() {
           <i className="fas fa-fw fa-table"></i>
           <span>Movies Chart</span>
         </Link>
+      </li>
+
+      <li className="nav-item">
+        <Logout></Logout>
       </li>
 
       {/*<!-- Divider -->*/}

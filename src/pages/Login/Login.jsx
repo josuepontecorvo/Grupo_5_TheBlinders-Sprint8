@@ -1,8 +1,11 @@
 import { useRef } from "react"
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { createUser } from "../../redux/state/user";
 
 function Login() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     let inputEmail = useRef()
     let inputPassword = useRef()
     let feedback = useRef()
@@ -18,10 +21,11 @@ function Login() {
             .then(data => {
                 if (data.error) {
                     feedback.current.innerText = 'Credenciales invalidas'
-                } else (
+                } else {
                     feedback.current.innerText = ''
-                    // dispatch(createUser({...data.data}))
-                )
+                    dispatch(createUser({...data.data}))
+                    navigate("/dashboard")
+                }
             })
 
 
