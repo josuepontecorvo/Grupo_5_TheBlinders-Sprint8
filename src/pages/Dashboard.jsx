@@ -1,3 +1,4 @@
+import { Chart } from "../components/Chart";
 import { ContentRowCenter } from "../components/ContentRowCenter";
 import { ContentRowDb } from "../components/ContentRowDb";
 
@@ -7,6 +8,7 @@ function ContentWrapper() {
             <div id="content">
                 <ContentRowDb />
                 <ContentRowCenter />
+                <Chart />
             </div>
         </div>
     );

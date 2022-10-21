@@ -1,16 +1,31 @@
+import { useEffect, useState } from "react";
+function CategoriesInDb() {
 
-function CategoriesInDb(props) {
+    const [categories, setCategories] = useState({})
+
+    useEffect(() => {
+        let url = 'http://localhost:3000/api/productos'
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setCategories(data.meta.totalByCategory)
+            })
+            
+    }, [])
+
+
     let bicicletas = {
         name: 'Bicicletas',
-        quantity: props.bicicletas
+        quantity: categories.bicicletas
     }
 
     let accesorios = {
         name: 'Accesorios',
-        quantity: props.accesorios
+        quantity: categories.accesorios
     }
 
     let categoriesInDb = [bicicletas, accesorios]
+
     return (
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
