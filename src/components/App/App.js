@@ -6,6 +6,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Login from '../../pages/Login/Login';
 import AuthGuard from '../../guards/log.guard';
 import { ProductDetail } from '../ProductDetail';
+import { ProductCreate } from '../../pages/ProductCreate';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route element={ <AuthGuard />}>
               <Route path="/dashboard" element={ <Dashboard /> } />
               <Route path="/detalle/:id" element={ <ProductDetail /> } />
+              <Route path="/producto/crear" element={ <ProductCreate /> } />
             </Route>
           </Routes>
         </ContentWrapper>

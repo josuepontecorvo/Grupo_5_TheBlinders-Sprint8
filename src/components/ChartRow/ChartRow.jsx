@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 function ChartRow(props) {
-    console.log(props)
     return (
       <tr>
         <td>{props.brand}</td>
