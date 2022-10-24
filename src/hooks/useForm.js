@@ -33,54 +33,99 @@ export const useForm = (initialForm, validateForm) => {
     const handleBlurCategory = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.categoryId) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setCategoryError(errors.categoryId)
     };
 
     const handleBlurType = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.typeId) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setTypeError(errors.typeId)
     };
 
     const handleBlurDescription = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.description) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setDescriptionError(errors.description)
     };
 
     const handleBlurPrice = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.price) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setPriceError(errors.price)
     };
 
     const handleBlurDiscount = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.discount) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setDiscountError(errors.discount)
     };
 
     const handleBlurBrand = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.brandId) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setBrandError(errors.brandId)
     };
 
     const handleBlurModel = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.model) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setModelError(errors.model)
     };
 
     const handleBlurSize = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.sizeId) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setSizeError(errors.sizeId)
     };
 
     const handleBlurColor = (e) => {
         handleChange(e);
         let errors = validateForm(form)
+        if(errors.colorId) {
+            e.target.style.borderColor= "#e74c3c";
+        } else {
+            e.target.style.borderColor= "#2ecc71";
+        }
         setColorError(errors.colorId)
     };
 
