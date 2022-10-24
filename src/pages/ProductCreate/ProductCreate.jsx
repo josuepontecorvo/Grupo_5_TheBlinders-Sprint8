@@ -160,7 +160,7 @@ function ProductCreate() {
                 <div className="mb-3 row">
                     <label htmlFor="inputDescription" className="col-lg-4 col-form-label">Descripción:</label>
                     <input type="text" name="description" className="form-control" id="inputDescription" onBlur={handleBlurDescription} onChange={handleChange} value={form.description}/>
-                    {{descriptionError} && <small className="col-lg-12 my-1 text-center">{descriptionError}</small>}
+                    {{descriptionError} && <small className="col-lg-12 my-1 text-center" style={errorStyle}>{descriptionError}</small>}
                 </div>
                 <div className="mb-3 row">
                     <label htmlFor="Price" className="col-lg-4 col-form-label">Precio:</label>
