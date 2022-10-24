@@ -132,32 +132,58 @@ export const useForm = (initialForm, validateForm) => {
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
+        // Sequelize doesn't support empty string so we replace them with "null"
         e.preventDefault();
         let newProduct = {
-            categoryId: form.categoryId,
-            typeId: form.typeId,
-            description: form.description,
-            price: form.price,
-            discount: form.discount,
-            brandId: form.brandId,
-            model: form.model,
-            sizeId: form.sizeId,
-            brakeId: form.brakeId,
-            colorId: form.colorId,
-            wheelSizeId: form.wheelSizeId,
-            frameId: form.frameId,
-            shiftId: form.shiftId,
-            suspensionId: form.suspensionId,
-            info: form.info
+            categoryId: form.categoryId || null,
+            typeId: form.typeId || null,
+            description: form.description || null,
+            price: form.price || null,
+            discount: form.discount || null,
+            brandId: form.brandId || null,
+            model: form.model || null,
+            sizeId: form.sizeId || null,
+            brakeId: form.brakeId || null,
+            colorId: form.colorId || null,
+            wheelSizeId: form.wheelSizeId || null,
+            frameId: form.frameId || null,
+            shiftId: form.shiftId || null,
+            suspensionId: form.suspensionId || null,
+            info: form.info || null
         }
-        console.log(newProduct)
+        // We verificate if there aren't errors to send the new products, if there are errors we prevent the submition. 
+        let errors = validateForm(form)
 
-        //fetch("http://localhost:3000/api/productos/crear", { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newProduct) })
-        //    .then(res => res.json())
-        //    .then(data => {
-        //        console.log(data)
-        //        navigate("/dashboard")
-        //    })
+
+        if (!Object.keys(errors).length > 0) {
+            setLoading(true)
+            fetch("http://localhost:3000/api/productos/crear", { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newProduct) })
+           .then(res => res.json())
+           .then(info => {
+                setLoading(false)
+                
+                if (info.meta.status === 201) {
+                    
+                    setResponse(true)
+                    setForm(initialForm)
+                    setTimeout(() => {
+                        setResponse(false)
+                        navigate("/dashboard")
+                    }, 2000);
+                    
+                } else {
+                    let errors = info.data
+                    setCategoryError(errors?.categoryId?.msg || null)
+                    setTypeError(errors?.typeId?.msg || null)
+                    setDescriptionError(errors?.description?.msg || null)
+                    setPriceError(errors?.price?.msg || null)
+                    setDiscountError(errors?.discount?.msg || null)
+                    setBrandError(errors?.brandId?.msg || null)
+                    setModelError(errors?.model?.msg || null)
+                }
+           })
+        }
+        
     };
 
     return {

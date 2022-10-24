@@ -1,3 +1,5 @@
+import { Loader } from "../../components/Loader";
+import { Message } from "../../components/Message";
 import { useForm } from "../../hooks/useForm";
 
 const initialForm = {
@@ -267,6 +269,8 @@ function ProductCreate() {
                     <button type="submit" className="btn btn-primary col-lg-12 mb-3">Confirmar</button>
                 </div>
             </form>
+            {loading && <Loader />}
+            {response && <Message msg="Producto creado" bgColor="#198754" />}
         </div>
     )
 }

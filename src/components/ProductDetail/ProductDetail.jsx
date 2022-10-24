@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Form, useNavigate, useParams } from "react-router-dom"
 
 function ProductDetail() {
 
     const [product, setProduct] = useState({})
+    const navigate = useNavigate();
     
     let { id } = useParams()
     useEffect(() => {
@@ -19,6 +20,19 @@ function ProductDetail() {
     let descuento = ''
     if(product.discount > 0) {
         descuento = `Descuento: ${product.discount}%`
+    }
+
+    function handleDelete (e) {
+        e.preventDefault()
+        fetch(`http://localhost:3000/api/productos/eliminar/${id}`, { method: 'delete', headers: { 'Content-Type': 'application/json' }})
+           .then(res => res.json())
+           .then(info => {
+            if(info.meta.status === 200) {
+                navigate('/dashboard')
+            } else {
+                alert(info.data)
+            }
+           })
     }
 
     return (
@@ -48,6 +62,9 @@ function ProductDetail() {
                        {descuento}
                     </p>
                 </div>
+                <form onSubmit={handleDelete}>
+                    <button type="submit" className="btn btn-danger col-lg-12 mb-3">Eliminar</button>
+                </form>
             </div>
         </div>
     );
