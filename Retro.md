@@ -3,30 +3,29 @@ Retrospectiva 🕵️
 Luego de realizar la retrospectiva de la etapa finalizada, utilizando el método de la estrella de mar, se llegaron a las siguientes conclusiones:
 
 🔘Comenzar a hacer:
-    -Testear el funcionamiento parcial de la app, para acotar los archivos donde buscar bugs. 
-    -Llevar registro de los test hechos asi poder probar la app en todos sus vertices una vez logrado el script a entregar.
+    -Revisar el funcionamiento de la app respecto a las exigencias de sprint previos.
+    -Revisión periodica de tareas pendientes.
 
 ✅Hacer mas:
-    -Consultar dudas en las consignas. 
-    -Realizar reuniones más proximas dentro del sprint para evaluar avance. 
-    -Consultar a mis compañeros cuando algo no me sale.
+    -Registrar los test realizados y realizar test parciales durante el avance.
+    -Consultar cuando surgan dudas. 
+    -Comentar al equipo el avance de las tareas. 
 
 ✅Continuar haciendo:
     -Mantener el trabajo en equipo y la rápida resolución de tareas.
     -Festejar logros.
-    -Retrospectivas individuales.
     -Compartir la experiencia de la tarea realizada por cada uno con el resto del equipo.
     -Evaluar como afectan las tareas actuales a las futuras.
     -Resolver cuestiones que afectan al trabajo de los demas con prioridad.
 
 ⚠️Hacer menos:
-    -Hacer tareas opcionales antes que las obligatorias.
+    -Dejar detalles sin realizar en tareas que ya están casi terminadas.
     
 ⛔Dejar de hacer:
-    
+    -Hacer tareas opcionales antes que las obligatorias.
 
-Corolario Sprint 6:
-    El equipo esta cumpliendo con los sprint, con tiempo para probar la funcionalidad de la aplicación antes de la entrega. A su vez se nota predispuesto a afrontar nuevos retos y a la mejora continua de la aplicación. 
+Corolario Sprint 7:
+    El equipo cumplio con el sprint 7 y afronto la tarea de crear las APIs requeridas para el sprint 8. Algo a notar, que no habia sucedido hasta el momento, es que algunos cambios en este sprint afectaron a tareas de sprint anteriores y pasaron de ser percibidos hasta que se recibio la devolución del sprint. Mas alla de ello, el equipo esta comprometido, avanzando y cumpliendo con los tiempos de entrega.  
 
 
 
