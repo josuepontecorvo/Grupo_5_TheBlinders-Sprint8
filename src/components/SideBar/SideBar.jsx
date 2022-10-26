@@ -23,7 +23,7 @@ function SideBar() {
       <li className="nav-item active">
         <Link className="nav-link" to="/">
           <i className="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard - DH movies</span>
+          <span>Dashboard</span>
         </Link>
       </li>
 
@@ -33,45 +33,38 @@ function SideBar() {
       {/*<!-- Heading -->*/}
       <div className="sidebar-heading">Actions</div>
 
-      {/*<!-- Nav Item - Search Movies -->*/}
+      {/*<!-- Nav Item - Login-->*/}
       <li className="nav-item">
-        <Link className="nav-link collapsed" to="/search-movies">
-          <i className="fas fa-fw fa-search"></i>
-          <span>Search Movies</span>
-        </Link>
-      </li>
-
-      {/*<!-- Nav Item - Content Movies -->*/}
-      <li className="nav-item">
-        <Link className="nav-link collapsed" to="/content-movies">
-          <i className="fas fa-fw fa-folder"></i>
-          <span>Content Movies</span>
-        </Link>
-      </li>
-
-      {/*<!-- Nav Item - Last Movie In Db -->*/}
-      <li className="nav-item">
-        <Link className="nav-link" to="/last-movie-in-db">
-          <i className="fas fa-fw fa-chart-area"></i>
-          <span>Last Movie In Db</span>
-        </Link>
-      </li>
-
-      {/*<!-- Nav Item - Genres In Db -->*/}
-      <li className="nav-item">
-        <Link className="nav-link" to="/genres-in-db">
-          <i className="fas fa-fw fa-film"></i>
-          <span>Genres In Db</span>
-        </Link>
-      </li>
-
-      {/*<!-- Nav Item - Movies Chart -->*/}
-      <li className="nav-item">
-        <Link className="nav-link" to="/movies-chart">
+        <Link className="nav-link" to="/login">
           <i className="fas fa-fw fa-table"></i>
-          <span>Movies Chart</span>
+          <span>Admin-Login</span>
         </Link>
       </li>
+
+      {/*<!-- Nav Item - Products list -->*/}
+      <li className="nav-item">
+        <Link className="nav-link collapsed" to="/productos">
+          <i className="fas fa-fw fa-folder"></i>
+          <span>Productos</span>
+        </Link>
+      </li>
+
+      {/*<!-- Nav Item - Last Product in DB -->*/}
+      <li className="nav-item">
+        <Link className="nav-link" to="/ultimoproducto">
+          <i className="fas fa-fw fa-chart-area"></i>
+          <span>Último Producto</span>
+        </Link>
+      </li>
+
+      {/*<!-- Nav Item - Stats -->*/}
+      <li className="nav-item">
+        <Link className="nav-link" to="/estadisticas">
+          <i className="fas fa-fw fa-film"></i>
+          <span>Estadísticas</span>
+        </Link>
+      </li>
+
 
       {/*<!-- Nav Item - Product Create -->*/}
       <li className="nav-item">

@@ -210,6 +210,17 @@ export const useForm = (initialForm, validateForm) => {
         handleBlurModel,
         handleBlurSize,
         handleBlurColor,
-        handleSubmit
+        handleSubmit,
+        setLoading,
+        setResponse,
+        setForm,
+        setCategoryError,
+        setTypeError,
+        setDescriptionError,
+        setPriceError,
+        setDiscountError,
+        setBrandError,
+        setModelError,
+        setForm
     }
 }

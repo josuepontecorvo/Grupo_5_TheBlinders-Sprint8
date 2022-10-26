@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Form, useNavigate, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 
 function ProductDetail() {
 
@@ -62,6 +62,7 @@ function ProductDetail() {
                        {descuento}
                     </p>
                 </div>
+                <Link to={`/producto/editar/${id}`} className="btn btn-primary col-lg-12 mb-3">Editar</Link>
                 <form onSubmit={handleDelete}>
                     <button type="submit" className="btn btn-danger col-lg-12 mb-3">Eliminar</button>
                 </form>
