@@ -31,7 +31,7 @@ function LastProductInDb() {
                         <img
                             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                             style={{ width: 40 + "rem" }}
-                            src={`http://theblinders-sprint7.herokuapp.com${lastProduct.Images}`}
+                            src={`https://theblinders-sprint7.herokuapp.com${lastProduct.Images}`}
                             alt={lastProduct.category}
                         />
                     </div>

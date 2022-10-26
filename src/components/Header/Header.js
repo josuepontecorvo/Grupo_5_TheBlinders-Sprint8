@@ -21,7 +21,7 @@ function Header() {
                         {userState.image ? 
                         <img
                             className="img-profile rounded-circle"
-                            src={`http://localhost:3000/images/users/${userState.image}`}
+                            src={`https://localhost:3000/images/users/${userState.image}`}
                             alt="User"
                             width="60"
                         /> :

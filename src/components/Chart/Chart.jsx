@@ -6,7 +6,7 @@ function Chart (){
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        let url = 'http://theblinders-sprint7.herokuapp.com/api/productos'
+        let url = 'https://theblinders-sprint7.herokuapp.com/api/productos'
         fetch(url)
             .then(response => response.json())
             .then(data => {

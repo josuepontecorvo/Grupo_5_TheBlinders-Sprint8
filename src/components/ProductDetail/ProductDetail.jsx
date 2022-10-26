@@ -8,7 +8,7 @@ function ProductDetail() {
     
     let { id } = useParams()
     useEffect(() => {
-        let url = `http://theblinders-sprint7.herokuapp.com/api/productos/${id}`
+        let url = `https://theblinders-sprint7.herokuapp.com/api/productos/${id}`
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -24,7 +24,7 @@ function ProductDetail() {
 
     function handleDelete (e) {
         e.preventDefault()
-        fetch(`http://theblinders-sprint7.herokuapp.com/api/productos/eliminar/${id}`, { method: 'delete', headers: { 'Content-Type': 'application/json' }})
+        fetch(`https://theblinders-sprint7.herokuapp.com/api/productos/eliminar/${id}`, { method: 'delete', headers: { 'Content-Type': 'application/json' }})
            .then(res => res.json())
            .then(info => {
             if(info.meta.status === 200) {
@@ -48,7 +48,7 @@ function ProductDetail() {
                         <img
                             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                             style={{ width: 40 + "rem" }}
-                            src={`http://theblinders-sprint7.herokuapp.com${product.Images}`}
+                            src={`https://theblinders-sprint7.herokuapp.com${product.Images}`}
                             alt={product.category}
                         />
                     </div>
