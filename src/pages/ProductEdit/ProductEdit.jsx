@@ -146,7 +146,7 @@ function ProductEdit() {
     const [initialValues, setInitialValues] = useState({})
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/productos/info-formulario")
+        fetch("http://theblinders-sprint7.herokuapp.com/api/productos/info-formulario")
             .then(res => res.json())
             .then(data => setFields(data.data))
     }, [])
@@ -155,7 +155,7 @@ function ProductEdit() {
     
 
     useEffect(() => {
-        let url = `http://localhost:3000/api/productos/editar/${id}`
+        let url = `http://theblinders-sprint7.herokuapp.com/api/productos/editar/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -206,7 +206,7 @@ function ProductEdit() {
 
         if (Object.keys(errors).length === 0) {
             setLoading(true)
-            let url = `http://localhost:3000/api/productos/editar/${id}`
+            let url = `http://theblinders-sprint7.herokuapp.com/api/productos/editar/${id}`
             fetch(url, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(editProduct) })
            .then(res => res.json())
            .then(info => {

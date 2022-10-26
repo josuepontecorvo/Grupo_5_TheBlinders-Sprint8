@@ -4,7 +4,7 @@ function LastProductInDb() {
     const [lastProduct, setLastProduct] = useState({})
 
     useEffect(() => {
-        let url = 'http://localhost:3000/api/productos/ultimo'
+        let url = 'http://theblinders-sprint7.herokuapp.com/api/productos/ultimo'
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -31,7 +31,7 @@ function LastProductInDb() {
                         <img
                             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                             style={{ width: 40 + "rem" }}
-                            src={`http://localhost:3000${lastProduct.Images}`}
+                            src={`http://theblinders-sprint7.herokuapp.com${lastProduct.Images}`}
                             alt={lastProduct.category}
                         />
                     </div>

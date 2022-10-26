@@ -4,7 +4,7 @@ function CategoriesInDb() {
     const [categories, setCategories] = useState({})
 
     useEffect(() => {
-        let url = 'http://localhost:3000/api/productos'
+        let url = 'http://theblinders-sprint7.herokuapp.com/api/productos'
         fetch(url)
             .then(response => response.json())
             .then(data => {

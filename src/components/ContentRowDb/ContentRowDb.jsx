@@ -8,8 +8,8 @@ function ContentRowDb() {
     const [categories, setCategories] = useState({})
 
     useEffect(() => {
-        let urlProductos = 'http://localhost:3000/api/productos'
-        let urlUsuarios = 'http://localhost:3000/api/usuarios'
+        let urlProductos = 'http://theblinders-sprint7.herokuapp.com/api/productos'
+        let urlUsuarios = 'http://theblinders-sprint7.herokuapp.com/api/usuarios'
         fetch(urlProductos)
             .then(response => response.json())
             .then(data => {
