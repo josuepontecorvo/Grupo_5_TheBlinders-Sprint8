@@ -15,7 +15,7 @@ function Login() {
         let username = inputEmail.current.value
         let password = inputPassword.current.value
         let credentials = {username, password}
-        fetch("http://theblinders-sprint7.herokuapp.com/api/usuarios/ingresar", {method: 'POST', headers: {'Content-Type': 'application/json'},body: JSON.stringify(credentials)})
+        fetch("https://theblinders-sprint7.herokuapp.com/api/usuarios/ingresar", {method: 'POST', headers: {'Content-Type': 'application/json'},body: JSON.stringify(credentials)})
             .then(res => res.json())
             .then(data => {
                 if (data.error) {

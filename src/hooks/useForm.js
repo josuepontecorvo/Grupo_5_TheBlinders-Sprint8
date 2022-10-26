@@ -17,7 +17,7 @@ export const useForm = (initialForm, validateForm) => {
     const [fields, setFields] = useState({})
 
     useEffect(() => {
-        fetch("http://theblinders-sprint7.herokuapp.com/api/productos/info-formulario")
+        fetch("https://theblinders-sprint7.herokuapp.com/api/productos/info-formulario")
             .then(res => res.json())
             .then(data => setFields(data.data))
     }, [])
@@ -157,7 +157,7 @@ export const useForm = (initialForm, validateForm) => {
 
         if (!Object.keys(errors).length > 0) {
             setLoading(true)
-            fetch("http://theblinders-sprint7.herokuapp.com/api/productos/crear", { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newProduct) })
+            fetch("https://theblinders-sprint7.herokuapp.com/api/productos/crear", { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newProduct) })
            .then(res => res.json())
            .then(info => {
                 setLoading(false)

@@ -4,7 +4,7 @@ function LastProductInDb() {
     const [lastProduct, setLastProduct] = useState({})
 
     useEffect(() => {
-        let url = 'http://theblinders-sprint7.herokuapp.com/api/productos/ultimo'
+        let url = 'https://theblinders-sprint7.herokuapp.com/api/productos/ultimo'
         fetch(url)
             .then(response => response.json())
             .then(data => {
