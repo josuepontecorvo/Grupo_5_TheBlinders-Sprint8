@@ -21,7 +21,7 @@ function Header() {
                         {userState.image ? 
                         <img
                             className="img-profile rounded-circle"
-                            src={`https://localhost:3000/images/users/${userState.image}`}
+                            src={`https://theblinders-sprint7.herokuapp.com/images/users/${userState.image}`}
                             alt="User"
                             width="60"
                         /> :
