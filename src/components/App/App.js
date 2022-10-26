@@ -8,9 +8,11 @@ import AuthGuard from '../../guards/log.guard';
 import { ProductDetail } from '../ProductDetail';
 import { ProductCreate } from '../../pages/ProductCreate';
 import { ProductEdit } from '../../pages/ProductEdit';
+import { UserList } from '../../pages/UserList';
 import { Chart } from '../Chart';
 import { LastProductInDb } from '../LastProductInDb';
 import { Stats } from '../Stats';
+import { UserDetail } from '../UserDetail';
 
 function App() {
 
@@ -27,8 +29,10 @@ function App() {
             <Route path="/productos" element={ <Chart /> } />
             <Route path="/ultimoproducto" element={ <LastProductInDb /> } />
             <Route path="/estadisticas" element={ <Stats /> } />
+            <Route path="/usuarios" element={ <UserList /> } />
             <Route element={ <AuthGuard />}>
               <Route path="/detalle/:id" element={ <ProductDetail /> } />
+              <Route path="usuarios/detalle/:id" element={ <UserDetail />} />
               <Route path="/producto/crear" element={ <ProductCreate /> } />
               <Route path="/producto/editar/:id" element={ <ProductEdit /> } />
             </Route>

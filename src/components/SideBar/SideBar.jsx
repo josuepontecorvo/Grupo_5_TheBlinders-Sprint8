@@ -73,6 +73,14 @@ function SideBar() {
           <span>Crear Producto</span>
         </Link>
       </li>
+      
+      {/*<!-- Nav Item - User List -->*/}
+      <li className="nav-item">
+        <Link className="nav-link" to="/usuarios">
+          <i className="fas fa-fw fa-table"></i>
+          <span>Usuarios</span>
+        </Link>
+      </li>
 
       <li className="nav-item">
         <Logout></Logout>
