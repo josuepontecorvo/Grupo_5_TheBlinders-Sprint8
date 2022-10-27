@@ -41,6 +41,14 @@ function SideBar() {
         </Link>
       </li>
 
+      {/*<!-- Nav Item - Search Products-->*/}
+      <li className="nav-item">
+        <Link className="nav-link collapsed" to="/search">
+          <i className="fas fa-fw fa-search"></i>
+          <span>Search Products</span>
+        </Link>
+      </li>
+
       {/*<!-- Nav Item - Products list -->*/}
       <li className="nav-item">
         <Link className="nav-link collapsed" to="/productos">

@@ -376,7 +376,7 @@ function ProductEdit() {
                 </div>
             </form>
             {loading && <Loader />}
-            {response && <Message msg="Producto creado" bgColor="#198754" />}
+            {response && <Message msg="Producto editado" bgColor="#198754" />}
         </div>
     )
 }

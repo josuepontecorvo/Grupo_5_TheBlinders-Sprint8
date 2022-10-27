@@ -13,6 +13,7 @@ import { Chart } from '../Chart';
 import { LastProductInDb } from '../LastProductInDb';
 import { Stats } from '../Stats';
 import { UserDetail } from '../UserDetail';
+import { Search } from '../Search';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/ultimoproducto" element={ <LastProductInDb /> } />
             <Route path="/estadisticas" element={ <Stats /> } />
             <Route path="/usuarios" element={ <UserList /> } />
+            <Route path="/search" element={ <Search /> } />
             <Route element={ <AuthGuard />}>
               <Route path="/detalle/:id" element={ <ProductDetail /> } />
               <Route path="usuarios/detalle/:id" element={ <UserDetail />} />
